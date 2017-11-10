@@ -9,26 +9,23 @@ An Ansible role that installs [API-X](https://github.com/fcrepo4-labs/fcrepo-api
 
 Available variables are listed below, along with default values:
 
-API-X maven repository:
 ```
+# API-X Maven repository
 apix_feature_repo: mvn:org.fcrepo.apix/fcrepo-api-x-karaf/LATEST/xml/features
-```
 
-API-X features to install:
-```
+# API-X features to install
 apix_feature:
   - fcrepo-api-x
   - fcrepo-indexing-triplestore
   - fcrepo-service-camel
-```
 
-Karaf configuration directory:
-```
-apix_karaf_etc_dir: "{{ karaf_install_symlink }}/etc"
-```
+# Karaf directory
+apix_karaf_dir: /opt/karaf
 
-API-X configuration settings:
-```
+# Karaf /etc (configuration) directory
+apix_karaf_etc_dir: "{{ apix_karaf_dir }}/etc"
+
+# API-X configuration settings.
 apix_config:
   - pid: org.fcrepo.apix.registry.http
     settings:
@@ -42,7 +39,7 @@ apix_config:
 
 ## Dependencies
 
-* None
+* Apache Karaf
   
 ## Example Playbook
 
