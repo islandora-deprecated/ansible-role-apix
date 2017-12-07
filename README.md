@@ -39,13 +39,16 @@ apix_config:
 
 ## Dependencies
 
-* Apache Karaf
+An Apache Karaf container we recommend
+* Islandora-Devops.karaf
+     * [Github](https://github.com/Islandora-Devops/ansible-role-karaf)
+     * [Galaxy](https://galaxy.ansible.com/Islandora-Devops/karaf/)
   
 ## Example Playbook
 
     - hosts: webservers
       roles:
-        - { role: islandora.apix }
+        - { role: Islandora-Devops.apix }
 
 ## License
 
